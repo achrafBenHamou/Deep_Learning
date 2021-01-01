@@ -1,0 +1,5 @@
+https://icml.cc/virtual/2020/poster/6674
+http://dspace.univ-km.dz/xmlui/bitstream/handle/123456789/2625/Une%20approche%20Deep%20Learning%20pour%20l%E2%80%99analyse%20des%20Sentiments%20Sur%20Twitter.pdf?sequence=1&isAllowed=y
+https://connect.ed-diamond.com/MISC/MISCHS-018/Analyse-des-sentiments-avec-le-Deep-Learning
+https://github.com/nd-nyah/Natural-Language-Processing-NLP-Projects/blob/master/Document-Similarities-and-Sentiment-Classifications-a-Comparison-using-CNN-vs-LSTM-vs-GRU-RNN%20models.ipynb
+https://medium.com/analytics-vidhya/tweet-sentiment-extraction-e5d242ff93c2

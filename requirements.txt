@@ -1,4 +1,9 @@
 numpy==1.19.3
 pandas
 seaborn
-scikit-learn
+nltk
+sklearn
+tensorflow
+pydot
+keras
+pyspellchecker 
