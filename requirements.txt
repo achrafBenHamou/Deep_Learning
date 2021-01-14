@@ -2,4 +2,8 @@ numpy==1.19.3
 pandas
 tensorflow
 keras
+transformers
+sklearn
+tokenizers
+
  
