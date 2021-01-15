@@ -545,7 +545,7 @@ for k in range(input_ids_t.shape[0]):
 
 
 test['selected_text'] = all
-test[['textID','selected_text']].to_csv('.Data/submission.csv',index=False)
+test[['textID','selected_text']].to_csv('./Data/submission.csv',index=False)
 pd.set_option('max_colwidth', 60)
 test.sample(25)
 
