@@ -1,6 +1,5 @@
 ##
 ##############################################S
-import pandas as pd, numpy as np
 import tensorflow as tf
 import tensorflow.keras as K
 from sklearn.model_selection import StratifiedKFold
