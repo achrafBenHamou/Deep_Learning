@@ -541,7 +541,7 @@ for k in range(input_ids_t.shape[0]):
     else:
         text1 = " "+" ".join(test.loc[k,'text'].split())
         enc = tokenizer.encode(text1)
-        st = tokenizer.decode(enc.ids[a-2:b-1])
+        st = tokenizer.decode(enc[a-2:b-1])
     all.append(st)
 
 
