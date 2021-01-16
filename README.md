@@ -11,11 +11,11 @@ For installing requirements : pip install requirements.txt
 ### GRU model
 - The file used for train and generate model is GRU_model.ipynb
 - Jupyter notebook file contains final result of pridected selected_text
-- Generated model is Gru_model.hdf5
+- Generated model is Gru_model.h5
 ### LSTM model
 - The file used for train and generate model is LSTM_model.ipynb
 - Jupyter notebook file contains final result of pridected selected_text
-- Generated model is Lstm_model.hdf5
+- Generated model is Lstm_model.h5
 ### Roberta model
 - This model is based on RoBERTa pretrained model: A Robustly Optimized BERT Pretraining Approach by Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, Veselin Stoyanov. It is based on Google’s BERT model released in 2018.
 https://huggingface.co/transformers/model_doc/roberta.html
