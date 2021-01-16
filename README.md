@@ -10,9 +10,11 @@ https://www.kaggle.com/c/tweet-sentiment-extraction/data
 For installing requirements : pip install requirements.txt
 ### GRU model
 - The file used for train and generate model is GRU_model.ipynb
+- Jupyter notebook file contains final result of pridected selected_text
 - Generated model is Gru_model.hdf5
 ### LSTM model
 - The file used for train and generate model is LSTM_model.ipynb
+- Jupyter notebook file contains final result of pridected selected_text
 - Generated model is Lstm_model.hdf5
 ### Roberta model
 - This model is based on RoBERTa pretrained model: A Robustly Optimized BERT Pretraining Approach by Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, Veselin Stoyanov. It is based on Google’s BERT model released in 2018.
