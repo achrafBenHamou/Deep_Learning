@@ -5,17 +5,17 @@ The project consists in developing a model for the extraction of feelings, compe
 ## Data 
 The uploaded data contains csv files of train dataset, test dataset and the submission file
 https://www.kaggle.com/c/tweet-sentiment-extraction/data
-## Generate Model
+## Technical Approach and Models
 ### Requirements
 For installing requirements : pip install requirements.txt
 ### GRU model
-- The file used for train and generate model is GRU_model.ipynb
+- The file used for train and generate model is https://github.com/achrafBenHamou/Deep_Learning/blob/main/Gru_Model/Gru_model.ipynb
 - Jupyter notebook file contains final result of pridected selected_text
-- Generated model is Gru_model.h5
+- Generated model is https://github.com/achrafBenHamou/Deep_Learning/blob/main/Gru_Model/Gru_model.h5
 ### LSTM model
-- The file used for train and generate model is LSTM_model.ipynb
+- The file used for train and generate model is https://github.com/achrafBenHamou/Deep_Learning/blob/main/Lstm_Model/Lstm_model.ipynb
 - Jupyter notebook file contains final result of pridected selected_text
-- Generated model is Lstm_model.h5
+- Generated model is https://github.com/achrafBenHamou/Deep_Learning/blob/main/Lstm_Model/Lstm_model.h5
 ### Roberta model
 - This model is based on RoBERTa pretrained model: A Robustly Optimized BERT Pretraining Approach by Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, Veselin Stoyanov. It is based on Google’s BERT model released in 2018.
 https://huggingface.co/transformers/model_doc/roberta.html
@@ -23,4 +23,10 @@ https://huggingface.co/transformers/model_doc/roberta.html
 - The file used for train, generate and test model is Roberta_model.py
 - Roberta_model.py generate 5 models with jaccard similarity nearly 50 %
 - the final file producted for submission is the file https://github.com/achrafBenHamou/Deep_Learning/blob/main/Data/submission.csv
+## References
+- https://medium.com/analytics-vidhya/tweet-sentiment-extraction-e5d242ff93c2
+- https://github.com/thuwyh/Tweet-Sentiment-Extraction
+- https://github.com/joshzwiebel/Tweet-Sentiment-Extraction
+- https://github.com/mano3-1/Sentiment-Extraction-from-tweets
+
 
