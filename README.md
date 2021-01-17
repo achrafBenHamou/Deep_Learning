@@ -5,7 +5,7 @@ The project consists in developing a model for the extraction of feelings, compe
 ## Data 
 The uploaded data contains csv files of train dataset, test dataset and the submission file
 https://www.kaggle.com/c/tweet-sentiment-extraction/data
-## Generate Model
+## Technical Approach and Models
 ### Requirements
 For installing requirements : pip install requirements.txt
 ### GRU model
