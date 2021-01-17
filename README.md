@@ -23,4 +23,10 @@ https://huggingface.co/transformers/model_doc/roberta.html
 - The file used for train, generate and test model is Roberta_model.py
 - Roberta_model.py generate 5 models with jaccard similarity nearly 50 %
 - the final file producted for submission is the file https://github.com/achrafBenHamou/Deep_Learning/blob/main/Data/submission.csv
+## References
+- https://medium.com/analytics-vidhya/tweet-sentiment-extraction-e5d242ff93c2
+- https://github.com/thuwyh/Tweet-Sentiment-Extraction
+- https://github.com/joshzwiebel/Tweet-Sentiment-Extraction
+- https://github.com/mano3-1/Sentiment-Extraction-from-tweets
+
 
