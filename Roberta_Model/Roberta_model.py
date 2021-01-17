@@ -62,10 +62,9 @@ def loss_function(y_true, y_pred):
     return loss
 ### Define Model
 def build_model():
-    ##########config = RobertaConfig.from_pretrained('../input/tf-roberta/config-roberta-base.json')
     config = RobertaConfig.from_pretrained("roberta-base")
-    ####roberta_model = TFRobertaModel.from_pretrained('../input/tf-roberta/pretrained-roberta-base.h5',config=config)
     roberta_model = TFRobertaModel.from_pretrained('roberta-base')
+    ## input layers for given its to roberta model
     ids = tf.keras.layers.Input((MAX_LEN,), dtype=tf.int32)
     att = tf.keras.layers.Input((MAX_LEN,), dtype=tf.int32)
     tok = tf.keras.layers.Input((MAX_LEN,), dtype=tf.int32)
@@ -79,22 +78,34 @@ def build_model():
     x = roberta_model(indices,attention_mask=att_,token_type_ids=tok_)
 
     x1 = tf.keras.layers.Dropout(0.23)(x[0])
+    # This layer creates a convolution kernel that is convolved with the layer input over a single spatial (or temporal) dimension to produce a tensor of outputs.
+    # If use_bias is True, a bias vector is created and added to the outputs.
+    # Finally, if activation is not None, it is applied to the outputs as well
     x1 = tf.keras.layers.Conv1D(1536, 2,padding='same')(x1)
-    x1 = tf.keras.layers.LeakyReLU()(x1)
-    x1 = tf.keras.layers.Conv1D(128, 2,padding='same')(x1)
-    x1 = tf.keras.layers.LeakyReLU()(x1)
+    x1 = tf.keras.layers.ReLU()(x1)
     x1 = tf.keras.layers.Dense(1)(x1)
+    x1 = tf.keras.layers.ReLU()(x1)
+    x1 = tf.keras.layers.Dropout(0.33)(x1)
+    x1 = tf.keras.layers.Dense(1)(x1)
+    # Finally, if activation is not None, it is applied to the outputs as well
+    #x1 = tf.keras.layers.Conv1D(1536, 2,padding='same')(x1)
+    x1 = tf.keras.layers.Dense(1)(x1)
+    #Flatten: If inputs are shaped (batch,) without a feature axis, then flattening adds an extra channel dimension and output shape is (batch, 1).
     x1 = tf.keras.layers.Flatten()(x1)
-    x1 = tf.keras.layers.Activation('softmax')(x1)
+    x1 = tf.keras.layers.Activation('sigmoid')(x1)
 
     x2 = tf.keras.layers.Dropout(0.23)(x[0])
     x2 = tf.keras.layers.Conv1D(1536, 2,padding='same')(x2)
-    x2 = tf.keras.layers.LeakyReLU()(x2)
-    x2 = tf.keras.layers.Conv1D(128, 2,padding='same')(x2)
-    x2 = tf.keras.layers.LeakyReLU()(x2)
+    x2 = tf.keras.layers.ReLU()(x2)
+    x2 = tf.keras.layers.Dense(1)(x2)
+    x2 = tf.keras.layers.ReLU()(x2)
+    x2 = tf.keras.layers.Dropout(0.33)(x2)
+    x2 = tf.keras.layers.Dense(1)(x2)
+    # Finally, if activation is not None, it is applied to the outputs as well
+    #x1 = tf.keras.layers.Conv1D(1536, 2,padding='same')(x1)   
     x2 = tf.keras.layers.Dense(1)(x2)
     x2 = tf.keras.layers.Flatten()(x2)
-    x2 = tf.keras.layers.Activation('softmax')(x2)
+    x2 = tf.keras.layers.Activation('sigmoid')(x2)
 
     model = tf.keras.models.Model(inputs=[ids, att, tok], outputs=[x1,x2])
     optimizer = tf.keras.optimizers.Adam(learning_rate=3e-5)
